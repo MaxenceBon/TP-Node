@@ -4,7 +4,7 @@ const app = esprex();
 app.get('/', (req, res) => {
     res.end(`
     <h1>Home Page</h1>
-    <form method="POST" action="/contact>
+    <form method="POST" action="/contact">
     <input type="text" name="email">
     <button type="submit">Go !</button>
     </form>
