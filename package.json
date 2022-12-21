@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "cross-env NODE_ENV=production node ./bin/www",
+    "dev": "cross-env NODE_ENV=development nodemon ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +19,10 @@
   },
   "homepage": "https://github.com/MaxenceBon/TP-Node#readme",
   "dependencies": {
+    "cross-env": "^7.0.3",
     "node-modules": "^1.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }
