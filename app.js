@@ -2,7 +2,13 @@ const express = require('express')
 const app = express();
 const { resolve } = require('path')
 
+
 app.use(express.static(resolve('public')));
+
+app.get('/users', (req,res) => {
+  const data = require('./database/data.json')
+  res.json({nbOfUsers:data.users.length,users:data.users});
+});
 
 app.get('/', (req, res) => {
   res.sendFile(resolve('public', 'index.html'));
