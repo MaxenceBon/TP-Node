@@ -3,3 +3,4 @@ ssl/*
 !ssl/.gitkeep
 environment/*
 !environment/*~
+test.js
