@@ -1,8 +1,6 @@
 const router = require('express').Router(); //importe le router de express pour pouvoir le configurer
+const controller = require('../controllers/api-users.controllers')
 
-router.get('/users', (req,res) => {
-    const data = require('./database/data.json')
-    res.json({nbOfUsers:data.users.length,users:data.users});
-  });
+router.get('/users', controller.users);
 
 module.exports = router;

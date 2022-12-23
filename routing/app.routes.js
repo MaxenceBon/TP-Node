@@ -1,15 +1,15 @@
 const router = require('express').Router(); //importe le router de express pour pouvoir le configurer
-const controller = require('../controllers/controllers')
+const { home,contact,services,error } = require('../controllers/app.controllers')
 
-router.get('/', controller.home());  
+router.get('/', home());  
   
-router.get('/home', controller.home());
+router.get('/home', home());
   
-router.get('/contact', controller.contact());
+router.get('/contact', contact());
   
-router.get('/services', controller.services());
+router.get('/services', services());
 
-router.get('*', controller.error());  //* -> page par defaut. A mettre à la fin, car sinon renvoie toujours sur page d'accueil
+router.get('*', error());  //* -> page par defaut. A mettre à la fin, car sinon renvoie toujours sur page d'accueil
 
 
 module.exports = router;
