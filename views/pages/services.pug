@@ -1,9 +1,25 @@
-const layout = require('../layout');
+//- const layout = require('../layout');
 
-module.exports = `${layout}
-      <h1>Page de services</h1>
+//- module.exports = `${layout}
+//-       <h1>Page de services</h1>
       
-      <script src="/js/app.js"></script>
-    </body>
-  </html>
-`;
+//-       <script src="/js/app.js"></script>
+//-     </body>
+//-   </html>
+//- `;
+
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Service
+  body 
+    h1 Page de services 
+    nav
+      div: a(href="home") Accueil
+      div: a(href="contact") Contact
+      div: a(href="services") Services
+      div: a(href="utilisateurs") Utilisateurs 
