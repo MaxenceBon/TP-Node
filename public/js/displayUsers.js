@@ -1,4 +1,4 @@
-fetch('../database/data.json')
+window.fetch('/users')
     .then(response => response.json())
     .then(utilisateurs => {
       console.log(utilisateurs)
@@ -42,7 +42,12 @@ function displayUser(utilisateur) {
 function displayHeaders(utilisateur) {
     let html = ''
     for (const prop in utilisateur) {
-      html += `<th>${prop}</th>`
-    }
+        // if (prop == "address"){
+        //     html += `<th>${address.prop}</th>`
+        // }
+        // else {
+            html += `<th>${prop}</th>`
+        }
+    // }
     return html
 }
