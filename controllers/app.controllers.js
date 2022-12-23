@@ -1,23 +1,14 @@
 const { resolve } = require('path')
 
 
-function home (req,res){
+exports.homePage = (req,res) => {
     res.sendFile(resolve('public', 'index.html'));
 }
 
-function contact(req,res){
+exports.contactPage = (req,res) => {
     res.sendFile(resolve('public', 'contact.html'));
 }
 
-function services(req,res){
+exports.servicePage = (req,res) => {
     res.sendFile(resolve('public', 'services.html'));
 }
-
-function error(req, res){
-    res.sendFile(resolve('public', 'page404.html'));
-};
-
-module.exports = home,
-module.exports = contact,
-module.exports = services,
-module.exports = error
