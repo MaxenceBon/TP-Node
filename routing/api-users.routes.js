@@ -1,6 +1,6 @@
 const router = require('express').Router(); //importe le router de express pour pouvoir le configurer
-const controller = require('../controllers/api-users.controllers')
+const { users } = require('../controllers/api-users.controllers')
 
-router.get('/users', controller.users);
+router.get('/users', users);
 
 module.exports = router;
