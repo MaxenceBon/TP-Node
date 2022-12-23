@@ -1,4 +1,4 @@
 exports.getUsers = (req,res) => {
     const data = require('../database/data.json')
-    res.json({nbOfUsers:data.users.length,users:data.users});
+    res.json({users:data.users});
 }

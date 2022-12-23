@@ -12,3 +12,7 @@ exports.contactPage = (req,res) => {
 exports.servicePage = (req,res) => {
     res.sendFile(resolve('public', 'services.html'));
 }
+
+exports.usersPage = (req,res) => {
+    res.sendFile(resolve('public', 'utilisateurs.html'));
+}
